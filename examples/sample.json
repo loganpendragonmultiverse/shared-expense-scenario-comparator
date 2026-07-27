@@ -1,0 +1,19 @@
+{
+  "amount": "120.00",
+  "participants": [
+    {
+      "name": "Mara",
+      "income": 60000,
+      "usage": 3,
+      "percentage": 60,
+      "custom": 2
+    },
+    {
+      "name": "Ivo",
+      "income": 40000,
+      "usage": 1,
+      "percentage": 40,
+      "custom": 1
+    }
+  ]
+}
