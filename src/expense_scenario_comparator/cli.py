@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import json
 import sys
+from decimal import Decimal
 from pathlib import Path
 
 from .core import analyze, render_json, render_markdown
@@ -17,7 +18,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--output", type=Path)
     args = parser.parse_args(argv)
     try:
-        data = json.loads(args.input.read_text(encoding="utf-8"))
+        data = json.loads(args.input.read_text(encoding="utf-8"), parse_float=Decimal)
         report = analyze(data)
         rendered = render_json(report) if args.format == "json" else render_markdown(report)
         if args.output:
