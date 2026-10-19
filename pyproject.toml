@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "shared-expense-scenario-comparator"
-version = "1.0.1"
+version = "1.0.2"
 description = "Compare equal, percentage, income-weighted, usage-weighted, and custom expense splits."
 readme = "README.md"
 requires-python = ">=3.10"
@@ -38,3 +38,4 @@ addopts = "--cov=expense_scenario_comparator --cov-branch --cov-report=term-miss
 
 [tool.setuptools.data-files]
 "share/doc/shared-expense-scenario-comparator" = ["README.md", "CHANGELOG.md", "DEVELOPMENT.md", "TESTING.md"]
+"share/doc/shared-expense-scenario-comparator/examples" = ["examples/sample.json"]

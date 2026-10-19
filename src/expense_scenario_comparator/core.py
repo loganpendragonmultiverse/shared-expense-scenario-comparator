@@ -92,6 +92,8 @@ def _expense_scenarios(data: dict[str, Any]) -> dict[str, Any]:
 
 
 def analyze(data: dict[str, Any]) -> dict[str, Any]:
+    if not isinstance(data, dict):
+        raise ValueError("input must be a JSON object")  # noqa: TRY004 - CLI input validation
     return {"version": 1, "project": PROJECT, **_expense_scenarios(data)}
 
 
