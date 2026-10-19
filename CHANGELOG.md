@@ -2,6 +2,7 @@
 
 ## [1.0.2] - 2026-10-19
 
+- Reject existing output symlinks explicitly before exclusive creation on every platform.
 - Handle failed stdout writes and flushes without an interpreter-shutdown traceback.
 - Reject non-object JSON input with a concise CLI error.
 - Create reports exclusively so existing files, dangling symlinks and concurrently created reports are preserved.
